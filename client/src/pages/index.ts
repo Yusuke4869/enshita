@@ -3,3 +3,4 @@ export * from "./portal";
 export * from "./event";
 export * from "./apply-form";
 export * from "./not-found";
+export * from "./bad-request"

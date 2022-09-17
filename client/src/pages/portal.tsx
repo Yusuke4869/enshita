@@ -2,7 +2,7 @@ import type { FC } from "react";
 import EventCard from "~/components/event-card";
 import { fetcher } from "~/libs/axios";
 import useSWR from "swr";
-import type { Event } from "~/types/global-models";
+import type {Event} from "~/types/global-models";
 import { Redirect } from "wouter";
 import styles from "~/styles/pages/portal.module.scss";
 
@@ -14,7 +14,7 @@ const PortalPage: FC = () => {
     <section className={styles["enshita-home-page"]}>
       <h1 className={styles["enshita-home-page-title"]}>イベント一覧</h1>
       <div className={styles["enshita-home-page-events"]}>
-        {data.map(event => (
+        {data.length && data.map(event => (
           <EventCard
             eventId={event.eventId}
             title={event.title}

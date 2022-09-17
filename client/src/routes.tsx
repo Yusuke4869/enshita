@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Redirect, Router as Wouter } from "wouter";
-import { LandingPage, PortalPage, EventPage, ApplyFormPage, NotFound } from "./pages";
+import { LandingPage, PortalPage, EventPage, ApplyFormPage, NotFound, BadRequest } from "./pages";
 
 const Router: React.FC = () => (
   <Switch>
@@ -15,6 +15,7 @@ const Router: React.FC = () => (
     <Route path="/apply">
       <Redirect to="/portal" />
     </Route>
+    <Route path="/login" component={BadRequest} />
     <Route component={NotFound} />
     <Route path="/apply/:id">
       {params => <ApplyFormPage eventId={params.id} />}

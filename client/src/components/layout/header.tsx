@@ -18,7 +18,7 @@ const Header: FC<HeaderProperties> = ({ disableStyle }) => (
     <div className={styles["enshita-header-hidden"]}>
       <AnchorButton
         variant="normal"
-        href="./login"
+        href="/login"
         boxStyles={styles["enshita-header-button"]}
       >
         login
